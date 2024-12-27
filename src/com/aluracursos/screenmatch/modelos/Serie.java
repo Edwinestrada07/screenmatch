@@ -30,7 +30,7 @@ public class Serie extends Titulo {
     }
 
     @Override //Sobreescritura de métodos
-    public int getDuracionTotalEnMinutos() {
+    public int getDuracionEnMinutos() {
         return temporadas * episodiosPorTemporada * minutosPorEpisodio;
     }
 }
