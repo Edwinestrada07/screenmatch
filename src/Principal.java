@@ -56,19 +56,22 @@ public class Principal {
         episodio.setTotalVisualizaciones(50);
         filtroRecomendacion.filtra(episodio);
 
+        /////////////////////////////////////////////////////////////////////////////////////////
+        /// Variable de referencia ***** Tipo de objeto que se guardará (Se puede modificar el pelicula de la izq por Var) Var: hace una inferencia del tipo de dato del objeto que esta en el lado derecho
+        //Pelicula peliculaDeBruno = new Pelicula()
         var peliculaDeBruno = new Pelicula();
         peliculaDeBruno.setNombre("El señor de los añillos");
         peliculaDeBruno.setDuracionEnMinutos(180);
         peliculaDeBruno.setFechaDeLanzamiento(2001);
 
-        // Lista y Colecciones de Datos (ArrayList) <Tipo de dato>
+        // Lista y Colecciones de Datos (ArrayList<E>) <Tipo de dato que tendra cada uno de los objetos en el arraylist>
         ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
         listaDePeliculas.add(miPelicula); // Para agregar un dato al array con add
         listaDePeliculas.add(otraPelicula);
         listaDePeliculas.add(peliculaDeBruno);
 
         System.out.println("Tamaño de la lista: " + listaDePeliculas.size()); // Tamaño del array .size
-        System.out.println("La primera pelicula es: " + listaDePeliculas.get(0).getNombre()); // Buscar un elemento en particular
+        System.out.println("La primera pelicula es: " + listaDePeliculas.get(0).getNombre()); // Buscar un elemento en particular (posicion y nombre)
         System.out.println(listaDePeliculas);
 
         System.out.println(listaDePeliculas.get(0).toString());
