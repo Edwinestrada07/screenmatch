@@ -10,6 +10,13 @@ public class Titulo {
     private double sumaDeLasEvaluaciones;
     private int totalDeLasEvaluaciones;
 
+    
+    //Constructor almacena información en un espacio en memoria
+    public Titulo(String nombre, int fechaDeLanzamiento) {
+        this.nombre = nombre;
+        this.fechaDeLanzamiento = fechaDeLanzamiento;
+    }
+
     //Setters métodos que establecen un nuevo valor para un atributo
     public void setNombre(String nombre) {
         this.nombre = nombre; //this. que se refiere al atributo de la clase pelicula / valor que el usuario ingresa

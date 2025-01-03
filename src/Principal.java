@@ -9,11 +9,10 @@ import com.aluracursos.screenmatch.modelos.Serie;
 public class Principal {
     public static void main(String[] args) {
         // Un objeto es una instancia de una clase
-        Pelicula miPelicula = new Pelicula(); // instanciacion de la clase com.aluracursos.screenmatch.modelos.Pelicula
+        Pelicula miPelicula = new Pelicula("LaLaLand", 2021); // instanciacion de la clase com.aluracursos.screenmatch.modelos.Pelicula
 
         // Accediendo y modificando los datos mediante métodos públicos
-        miPelicula.setNombre("LaLaLand");
-        miPelicula.setFechaDeLanzamiento(2021);
+        //miPelicula.setFechaDeLanzamiento(2021);
         miPelicula.setDuracionEnMinutos(120);
         miPelicula.setIncluidoEnElPlan(true);
 
@@ -24,18 +23,14 @@ public class Principal {
         System.out.println(miPelicula.getTotalDeLasEvaluaciones());
         System.out.println(miPelicula.calculaMedia());
 
-        Serie casaDragon = new Serie();
-        casaDragon.setNombre("La Casa del Dragon");
-        casaDragon.setFechaDeLanzamiento(2022);
+        Serie casaDragon = new Serie("La Casa del Dragon", 2022);
         casaDragon.setTemporadas(1);
         casaDragon.setMinutosPorEpisodio(50);
         casaDragon.setEpisodiosPorTemporada(10);
         casaDragon.muestraFichaTecnica();
         System.out.println(casaDragon.getDuracionEnMinutos());
 
-        Pelicula otraPelicula = new Pelicula();
-        otraPelicula.setNombre("Joker");
-        otraPelicula.setFechaDeLanzamiento(1998);
+        Pelicula otraPelicula = new Pelicula("Joker", 1998);
         otraPelicula.setDuracionEnMinutos(180);
 
         CalculadoraDeTiempo calculadora = new CalculadoraDeTiempo();
@@ -59,10 +54,8 @@ public class Principal {
         /////////////////////////////////////////////////////////////////////////////////////////
         /// Variable de referencia ***** Tipo de objeto que se guardará (Se puede modificar el pelicula de la izq por Var) Var: hace una inferencia del tipo de dato del objeto que esta en el lado derecho
         //Pelicula peliculaDeBruno = new Pelicula()
-        var peliculaDeBruno = new Pelicula();
-        peliculaDeBruno.setNombre("El señor de los añillos");
+        var peliculaDeBruno = new Pelicula("El señor de los añillos", 2001);
         peliculaDeBruno.setDuracionEnMinutos(180);
-        peliculaDeBruno.setFechaDeLanzamiento(2001);
 
         // Lista y Colecciones de Datos (ArrayList<E>) <Tipo de dato que tendra cada uno de los objetos en el arraylist>
         ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
@@ -72,8 +65,8 @@ public class Principal {
 
         System.out.println("Tamaño de la lista: " + listaDePeliculas.size()); // Tamaño del array .size
         System.out.println("La primera pelicula es: " + listaDePeliculas.get(0).getNombre()); // Buscar un elemento en particular (posicion y nombre)
-        System.out.println(listaDePeliculas);
+        System.out.println(listaDePeliculas.toString());
 
-        System.out.println(listaDePeliculas.get(0).toString());
+        System.out.println("toString de la pelicula: " + listaDePeliculas.get(0).toString());
     }
 }

@@ -5,6 +5,11 @@ public class Serie extends Titulo {
     int episodiosPorTemporada;
     int minutosPorEpisodio;
 
+    //Como se creo un construstor en la clase madre titulo (debe crearse en serie y pelicula)
+    public Serie(String nombre, int fechaDeLanzamiento) {
+        super(nombre, fechaDeLanzamiento); // con super llama al constructor de la madre y le pasa los parametros
+    }
+
     public int getTemporadas() {
         return temporadas;
     }
